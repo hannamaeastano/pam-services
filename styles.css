@@ -1,0 +1,231 @@
+/* Modern, Customer-Friendly Color Palette */
+:root {
+    --cool-blue: #00a8e8;       /* Vibrant blue for trust/professionalism */
+    --deep-blue: #0077b6;       /* Darker blue for contrast */
+    --ice-white: #f8f9ff;       /* Crisp white background */
+    --sun-orange: #ff7f11;      /* Warm accent for calls-to-action */
+    --dark-text: #2b2d42;       /* Easy-to-read dark text */
+    --frost-teal: #48cae4;      /* Cool accent color */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles with Modern Font Stack */
+body {
+    font-family: 'Montserrat', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-text);
+    background-color: var(--ice-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Eye-Catching Header */
+.navbar {
+    background: linear-gradient(135deg, var(--cool-blue), var(--deep-blue));
+    box-shadow: 0 4px 12px var(--shadow-color);
+    padding: 0.8rem 1rem;
+    border-bottom: 3px solid var(--sun-orange);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 600;
+    padding: 0.5rem 1.2rem !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Vibrant Main Content */
+.main-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+    padding: 30px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--deep-blue);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--cool-blue), var(--frost-teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Attractive Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--cool-blue), var(--frost-teal));
+    color: white;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+/* Attention-Grabbing Buttons */
+.btn-primary {
+    background: var(--sun-orange);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 127, 17, 0.3);
+}
+
+.btn-primary:hover {
+    background: #ff6a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 127, 17, 0.4);
+}
+
+/* Cool Feature List */
+.list-group-item {
+    border-left: 4px solid var(--frost-teal);
+    margin-bottom: 10px;
+    border-radius: 6px !important;
+    transition: all 0.3s ease;
+    padding: 15px 20px;
+}
+
+.list-group-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Refreshing Sidebar */
+.sidebar {
+    background-color: white;
+    border-right: 1px solid #e0e5ec;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar .nav-link {
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #f0f7ff;
+    color: var(--cool-blue);
+}
+
+/* Professional Footer */
+footer {
+    background: linear-gradient(135deg, var(--deep-blue), #005b92);
+    color: white;
+    padding: 25px 0;
+    margin-top: auto;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Fixes */
+footer {
+    background: linear-gradient(135deg, var(--deep-blue), #005b92);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    width: 100%;
+    margin-top: 40px; /* Creates consistent spacing above footer */
+    flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+/* Structural Improvements */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    flex: 1;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* Content Area Adjustments */
+.main-content {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+/* Medium Screen Fixes (768px-992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    footer {
+        margin-top: 30px; /* Slightly less space on medium screens */
+        padding: 15px 0;
+    }
+    
+    .main-content {
+        padding-bottom: 15px;
+    }
+}
+
+/* Small Screen Fixes */
+@media (max-width: 767.98px) {
+    footer {
+        margin-top: 20px;
+        padding: 12px 0;
+        font-size: 0.9rem;
+    }
+    
+    .main-content {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+}
+
+/* Ensure last elements don't create space */
+.main-content > *:last-child,
+.card:last-child,
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
