@@ -1,121 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAM AC Services - Home</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.A.M Refrigeration & Airconditioning Services</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-snowflake me-2"></i>PAM AC Services
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Main Content -->
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-3 col-md-4 d-none d-md-block">
-                <div class="sidebar p-3 bg-light rounded">
-                    <h2>Quick Links</h2>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html#installation">
-                                <i class="fas fa-tools me-2"></i>Installation
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html#repair">
-                                <i class="fas fa-wrench me-2"></i>Repair
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html#maintenance">
-                                <i class="fas fa-clipboard-check me-2"></i>Maintenance
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html#emergency">
-                                <i class="fas fa-exclamation-triangle me-2"></i>Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Main Content Area -->
-            <div class="col-lg-9 col-md-8 col-12">
-                <main class="p-3">
-                    <h1 class="mb-4">Welcome to PAM AC Services</h1>
-                    <p class="lead">We provide top-quality air conditioning services for both residential and commercial properties. With 9 years of experience, our technicians deliver reliable solutions to keep you cool all year round.</p>
-                    
-                    <div class="card bg-light border-primary mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Summer Special!</h3>
-                            <p class="card-text">Keep your cool this summer! Book your air conditioning service now and enjoy exclusive seasonal perks.</p>
-                            <a href="contact.html" class="btn btn-primary">Schedule Service</a>
-                        </div>
-                    </div>
-                    
-                    <h2 class="mb-3">Why Choose Us?</h2>
-                    <ul class="list-group mb-4">
-                        <li class="list-group-item">
-                            <i class="fas fa-check-circle text-success me-2"></i>Fast & hassle-free appointments
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fas fa-check-circle text-success me-2"></i>Prompt service to keep you cool without the wait
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fas fa-check-circle text-success me-2"></i>Upfront pricing with no hidden fees
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fas fa-check-circle text-success me-2"></i>100% satisfaction guarantee
-                        </li>
-                    </ul>
-                </main>
-            </div>
-        </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="images/LOGO.png" alt="PAM Logo" height="50" class="d-inline-block me-2">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-3 mt-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2025 PAM AC Services. All rights reserved.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4">P.A.M Refrigeration & Airconditioning Services</h1>
+          <p class="lead mb-4">Stay cool all year round with our expert installation, maintenance, and repair services.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg px-4">Get Service Now</a>
+          </div>
         </div>
-    </footer>
+        <div class="col-lg-6 d-none d-lg-block">
+          <img src="https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/489955499_1005833534993693_3736028457600345857_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8CBStFlbH7YQ7kNvwHi4I-b&_nc_oc=AdmmSO7s2ExflJ43e1E3fEGl4PEARP7UFt21wBD5u29rK_YP7Z8TxXJbT5IIJtKd0TU&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=XFPInOyJ26gEQCvVdGMLsA&oh=00_AfKlBZHGjSB4fTiNIENpTA5rkH2jflUPVIAl-St3J3-shQ&oe=683BFD6F" alt="AC Technician" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- About Section -->
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="about-content">
+          <h2 class="section-title mb-4">P.A.M Refrigeration & Airconditioning Services</h2>
+          <div class="divider mx-auto mb-4"></div>
+          <p class="lead mb-4">We've been keeping homes and businesses cool since 2020 with our professional air conditioning services.</p>
+          <p class="mb-4">At P.A.M Refrigeration & Airconditioning Services, our vision is to become the most trusted provider of cooling solutions for homes and businesses. We are dedicated to delivering top-quality installation, maintenance, and repair services through our team of NATE-certified technicians. With a strong commitment to honesty, integrity, and customer satisfaction, we aim to keep you cool and comfortable all year round.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our Services</h2>
+        <p class="lead text-muted">Comprehensive solutions for all your cooling needs</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+          <div class="card service-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h4 class="card-title">AC Installation</h4>
+              <p class="card-text">Professional installation of new systems with energy-efficient options to save you money.</p>
+              <a href="#contact" class="btn" style=" background: linear-gradient(90deg, #1a73e8, #34a853)">Get Installed</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="col-md-4">
+          <div class="card service-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+              <h4 class="card-title">AC Maintenance</h4>
+              <p class="card-text">Regular tune-ups to keep your system running efficiently and prevent costly repairs.</p>
+              <a href="#contact" class="btn" style=" background: linear-gradient(90deg, #1a73e8, #34a853)">Schedule Service</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="col-md-4">
+          <div class="card service-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h4 class="card-title">AC Repair</h4>
+              <p class="card-text">Fast, reliable repairs for all makes and models — done right the first time.</p>
+              <a href="#contact" class="btn" style=" background: linear-gradient(90deg, #1a73e8, #34a853)">Request Repair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Why Choose P.A.M</h2>
+        <p class="lead text-muted">We go above and beyond to earn your trust</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="why-us-card text-center p-4 h-100">
+            <div class="icon-box-lg mb-3">
+              <i class="fas fa-award"></i>
+            </div>
+            <h4 style="color: #003049;">Years Experience</h4>
+            <p>Our technicians have extensive training and hands-on experience with all AC systems.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="why-us-card text-center p-4 h-100">
+            <div class="icon-box-lg mb-3">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h4 style="color: #003049;">Fair Pricing</h4>
+            <p>No hidden fees - we provide transparent pricing before any work begins.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="why-us-card text-center p-4 h-100">
+            <div class="icon-box-lg mb-3">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4 style="color: #003049;">Quick Response</h4>
+            <p>Timely and professional service — we show up as scheduled and get the job done right.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="why-us-card text-center p-4 h-100">
+            <div class="icon-box-lg mb-3">
+              <i class="fas fa-thumbs-up"></i>
+            </div>
+            <h4 style="color: #003049;">Satisfaction Guarantee</h4>
+            <p>If you're not 100% satisfied, we'll make it right - no questions asked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="lead text-muted">Don't just take our word for it</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 h-100">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="mb-4">"CoolFlow installed our new AC unit and did an amazing job. The technicians were professional, clean, and efficient. Highly recommend!"</p>
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="rounded-circle" width="50">
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h6 class="mb-0">Sarah J.</h6>
+                <small class="text-muted">Homeowner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 h-100">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="mb-4">"Our office AC broke on the hottest day of the year. CoolFlow had someone out within 2 hours and fixed it quickly. Lifesavers!"</p>
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="rounded-circle" width="50">
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h6 class="mb-0">Michael T.</h6>
+                <small class="text-muted">Business Owner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 h-100">
+            <div class="rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="mb-4">"I've used CoolFlow for annual maintenance for 5 years. My system runs like new and my energy bills are lower than my neighbors'."</p>
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa M." class="rounded-circle" width="50">
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h6 class="mb-0">Lisa M.</h6>
+                <small class="text-muted">Long-term Customer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h2 class="section-title mb-4">Contact Us</h2>
+          <p class="lead">Ready to schedule service or have questions? We're here to help!</p>
+          
+          <div class="contact-info mt-4">
+            <div class="contact-item d-flex mb-3">
+              <div class="icon-box-sm me-3">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5 style="color: #003049;">Location</h5>
+                <p>Las Piñas, Philippines</p>
+              </div>
+            </div>
+            
+            <div class="contact-item d-flex mb-3">
+              <div class="icon-box-sm me-3">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h5 style="color: #003049;">Phone</h5>
+                <p><a href="tel:+15551234567">(0951) 123-4567</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-item d-flex mb-3">
+              <div class="icon-box-sm me-3">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5 style="color: #003049;">Email</h5>
+                <p><a href="mailto:info@gmail.com">pam@gmail.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-item d-flex">
+              <div class="icon-box-sm me-3">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h5 style="color: #003049;">Hours</h5>
+                <p>Mon-Fri: 8AM-6PM<br>Sat: 9AM-3PM</p>
+              </div>
+            </div>
+
+            <div class="contact-item d-flex">
+              <div class="icon-box-sm me-3">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div>
+                <h5 style="color: #003049;">Facebook</h5>
+                <p>P.A.M Refrigeration & Airconditioning Services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-7">
+          <div class="contact-form bg-white p-4 shadow-sm rounded">
+            <h4 class="mb-4">Get a Free Estimate</h4>
+            <form id="estimateForm" action="https://formsubmit.co/info@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New Estimate Request">
+              <input type="hidden" name="_template" value="box">
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    <label for="name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                    <label for="email">Email Address</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                    <label for="phone">Phone Number</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="service" name="service" required>
+                      <option value="" selected disabled>Select Service</option>
+                      <option value="Installation">New Installation</option>
+                      <option value="Maintenance">Maintenance</option>
+                      <option value="Repair">Repair Service</option>
+                      <option value="Inspection">System Inspection</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <label for="service">Service Needed</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 120px"></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn w-100 py-3 text-white" style="background-color: #003049;">Request Free Estimate</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto text-center">
+          <p class="mb-0">&copy; <span id="currentYear"></span> P.A.M Refrigeration & Airconditioning Services. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
