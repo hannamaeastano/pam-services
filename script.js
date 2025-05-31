@@ -51,25 +51,52 @@ document.addEventListener('DOMContentLoaded', function() {
     // Current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   
-    // Form submission handling
-    const estimateForm = document.getElementById('estimateForm');
-    if (estimateForm) {
-      estimateForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    const handleFormSubmit = async (form) => {
+      const submitBtn = form.querySelector('[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> Processing...';
+    
+      try {
+        // Convert FormData to URL-encoded format (required by FormSubmit)
+        const formData = new URLSearchParams(new FormData(form)).toString();
         
-        // Get form data
-        const formData = new FormData(estimateForm);
-        
-        // Simulate form submission (replace with actual AJAX call)
-        setTimeout(() => {
-          // Show success message
-          alert('Thank you for your request! We will contact you shortly.');
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json'
+          },
+          body: formData
+        });
+    
+        if (response.ok) {
+          // Success - show modal and log response
+          const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+          modal.show();
+          form.reset();
           
-          // Reset form
-          estimateForm.reset();
-        }, 1000);
-      });
-    }
+          // Debugging: Force email delivery check
+          console.log('Submission successful! Check:');
+          console.log('1. Email inbox (including spam)');
+          console.log('2. FormSubmit dashboard: https://formsubmit.co/');
+          
+          setTimeout(() => modal.hide(), 5000);
+        } else {
+          throw new Error(`Server responded with ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Submission error:', error);
+        alert(`Form submission failed. ${error.message}`);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Free Estimate';
+      }
+    };
+    
+    document.getElementById('estimateForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleFormSubmit(e.target);
+    });
   
     // Add animation class to elements when they come into view
     const animateOnScroll = function() {

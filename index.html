@@ -201,7 +201,7 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <p class="mb-4">"CoolFlow installed our new AC unit and did an amazing job. The technicians were professional, clean, and efficient. Highly recommend!"</p>
+            <p class="mb-4">"P.A.M installed our new AC unit and did an amazing job. The technicians were professional, clean, and efficient. Highly recommend!"</p>
             <div class="d-flex align-items-center">
               <div class="flex-shrink-0">
                 <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="rounded-circle" width="50">
@@ -223,7 +223,7 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <p class="mb-4">"Our office AC broke on the hottest day of the year. CoolFlow had someone out within 2 hours and fixed it quickly. Lifesavers!"</p>
+            <p class="mb-4">"Our office AC broke on the hottest day of the year. P.A.M had someone out within 2 hours and fixed it quickly. Lifesavers!"</p>
             <div class="d-flex align-items-center">
               <div class="flex-shrink-0">
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="rounded-circle" width="50">
@@ -245,7 +245,7 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
             </div>
-            <p class="mb-4">"I've used CoolFlow for annual maintenance for 5 years. My system runs like new and my energy bills are lower than my neighbors'."</p>
+            <p class="mb-4">"I've used P.A.M for annual maintenance for 5 years. My system runs like new and my energy bills are lower than my neighbors'."</p>
             <div class="d-flex align-items-center">
               <div class="flex-shrink-0">
                 <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa M." class="rounded-circle" width="50">
@@ -325,9 +325,13 @@
         <div class="col-lg-7">
           <div class="contact-form bg-white p-4 shadow-sm rounded">
             <h4 class="mb-4">Get a Free Estimate</h4>
-            <form id="estimateForm" action="https://formsubmit.co/info@gmail.com" method="POST">
-              <input type="hidden" name="_subject" value="New Estimate Request">
-              <input type="hidden" name="_template" value="box">
+            <form id="estimateForm" action="https://formsubmit.co/astanohannamae@gmail.com" method="POST">
+              <!-- Required FormSubmit Configuration -->
+              <input type="hidden" name="_subject" value="New Estimate Request (Website)">
+              <input type="hidden" name="_template" value="table"> <!-- Better formatting -->
+              <input type="hidden" name="_captcha" value="false"> <!-- Disable for testing -->
+              <input type="hidden" name="_autoresponse" value="We've received your request!"> <!-- Auto-reply -->
+              <input type="hidden" name="_next" value="javascript:void(0)"> <!-- Block redirect -->
               
               <div class="row g-3">
                 <div class="col-md-6">
@@ -377,6 +381,19 @@
       </div>
     </div>
   </section>
+
+  <!-- Thank You Modal -->
+<div id="thankYouModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <h4>Thank you for your request!</h4>
+        <p>We will contact you shortly.</p>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="footer py-4 bg-dark text-white">
