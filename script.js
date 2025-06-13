@@ -1,55 +1,73 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth < 992) { // Only for mobile
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false
-                });
-                bsCollapse.hide();
-            }
-        });
-    });
-    
-    // Add scroll effect for navbar
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            document.querySelector('.navbar').classList.add('scrolled');
-        } else {
-            document.querySelector('.navbar').classList.remove('scrolled');
-        }
-    });
-    
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                // Determine scroll offset, accounting for fixed navbar
-                const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get current navbar height
-                const offset = targetElement.offsetTop - navbarHeight - 10; // 10px extra padding
-                
-                window.scrollTo({
-                    top: offset,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse.classList.contains('show')) {
-                    const navbarToggler = document.querySelector('.navbar-toggler');
-                    navbarToggler.click();
-                }
-            }
-        });
-    });
-    
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const navbarToggler = document.querySelector('.navbar-toggler'); // Assuming you have a toggler button
+
+  // Create the close button dynamically
+  const closeBtn = document.createElement('button');
+  closeBtn.classList.add('close-btn');
+  closeBtn.innerHTML = '&times;'; // '×' character
+  navbarCollapse.prepend(closeBtn); // Add it to the beginning of the navbar-collapse
+
+  navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+          if (window.innerWidth < 992) { // Only for mobile
+              const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                  toggle: false
+              });
+              bsCollapse.hide();
+          }
+      });
+  });
+
+  // Event listener for the close button
+  closeBtn.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+          });
+          bsCollapse.hide();
+      }
+  });
+
+  // Add scroll effect for navbar
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+          document.querySelector('.navbar').classList.add('scrolled');
+      } else {
+          document.querySelector('.navbar').classList.remove('scrolled');
+      }
+  });
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+              // Determine scroll offset, accounting for fixed navbar
+              const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get current navbar height
+              const offset = targetElement.offsetTop - navbarHeight - 10; // 10px extra padding
+
+              window.scrollTo({
+                  top: offset,
+                  behavior: 'smooth'
+              });
+
+              // Close mobile menu if open
+              const navbarCollapse = document.querySelector('.navbar-collapse');
+              if (navbarCollapse.classList.contains('show')) {
+                  // Trigger the toggler button click to hide the menu
+                  if (navbarToggler) {
+                      navbarToggler.click();
+                  }
+              }
+          }
+      });
+  });
     // Current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     

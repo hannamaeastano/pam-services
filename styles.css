@@ -199,23 +199,49 @@ html {
 }
 
 /* Mobile menu adjustments */
+/* Side navbar styles for mobile */
 @media (max-width: 991.98px) {
   .navbar-collapse {
-      background-color: #6a7c95;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border-radius: 0.25rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: -100%; /* Changed from left to right */
+    width: 280px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #415a77;
+    transition: right 0.3s ease; /* Changed from left to right */
+    z-index: 1050;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1); /* Adjusted shadow for right side */
   }
-  
-  .nav-link {
-      padding: 0.5rem !important;
-      margin: 0.1rem 0;
+
+  .navbar-collapse.show {
+    right: 0; /* Changed from left to right */
   }
-  
-  .dropdown-menu {
-      margin-left: 1rem;
-      width: calc(100% - 2rem);
+
+  .navbar-nav {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  /* Close button */
+  .navbar-collapse::before {
+    content: ""; /* Remove content here, we'll add a separate button */
+  }
+
+  .navbar-collapse .close-btn { /* New class for the close button */
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Positioned on the left for a right-aligned navbar */
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
   }
 }
 
@@ -331,6 +357,12 @@ html {
   .hero img {
     width: 80%;
     margin-top: -30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse .close-btn {
+    display: none;
   }
 }
 
